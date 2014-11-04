@@ -41,8 +41,7 @@ class FileUploader < CarrierWave::Uploader::Base
     end
 
     def image?(file)
-      #File.extname(file.document_filename.to_s).match(/jpg|JPG|jpeg|JPEG|png|PNG|gif|GIF/)
-      true
+      File.extname(file.document_filename.to_s).match(/jpg|JPG|jpeg|JPEG|png|PNG|gif|GIF/)
     end
 
 end
